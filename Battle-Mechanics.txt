@@ -1,0 +1,96 @@
+Wrestling RPG
+=============
+
+Stats: (Dice Pool System)
+------
+Toughness - Defense Power (Soak)
+Stamina - Recovery Power (Move up on status ladder)
+Strength - Attack Damage (How much damage the moves make)
+Counter - Will the move hit? (Parry)
+
+Starting:
+You have 10d6 to distribute (splitting of die is allowed - equal to 3.5 pips)
+No stat can go above 4d6. No stat can be less than 0.5 pips
+
+Your Toughness = #die * 6
+
+Moveset:
+--------
+Moves fall in 4 categories (overlap of at most 2 categories): Punch, Kick, Leap, Grapple
+Each move has 3 stats: Speed, Damage, Degree
+
+For each move, Speed + Damage should be equal to 5 + 10 * Degree
+
+HP and Status changes:
+----------------------
+Statuses: Fresh, Tired, Exhausted, Zombie
+Initial HP = 4 * Toughness
+If current HP > 3 * Toughness, Fresh
+If current HP > 2 * Toughness, Tired
+If current HP > 1 * Toughness, Exhausted
+If current HP > 0, Zombie
+
+Audience:
+---------
+The charisma die (1d6) will roll at the end of every combat turn for each player. On a roll = 5-6, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
+
+If Fresh,       1d6 > 0 (always)
+If Tired,       1d6 > 2 (3,4,5,6)
+If Exhausted,   1d6 > 4 (5,6)
+If Zombie,      1d6 > 6 (never)
+
+On a roll = 1, the audience gets bored, and wants to see more drama. The degree of both players reduces by 1 or 2 (by die roll).
+
+If the HP difference between players is greater than 3*(#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. His degree increases to MAX.
+
+Battle:
+-------
+
+Players choose their moves. Inform GM without showing the other player(s). GM releases move order:
+
+1) Move with higher Speed goes first
+
+2) Move has (Strength + Speed + Matching) power. If this power > (Counter + Enemy's Speed), the move hits, else the move fails. (If equal, higher speed wins)
+
+3) Matching is based on category of moves:
+Leap > Punch > Kick > Grapple > Leap > Punch > ...
++3 if Punch vs. Kick
++3 if Kick vs. Grapple
++3 if Grapple vs. Leap
++3 if Leap vs. Punch
+-3 if Kick vs. Punch
+-3 if Punch vs. Leap
+-3 if Leap vs. Grapple
+-3 if Grapple vs. Kick
+0 otherwise
+
+4) If the move hits, it does Damage damage, and HP of the opponent reduces.
+
+5) Each player rolls the stamina dice and adds the total to their HP.
+
+6) The Audience makes a decision
+
+Tag Team Matches:
+----------------
+
+If you wish to tag your teammate in, you roll a die:
+
+If Fresh,       1d6 > 0 (always)
+If Tired,       1d6 > 2 (3,4,5,6)
+If Exhausted,   1d6 > 4 (5,6)
+If Zombie,      1d6 > 6 (never)
+
+The new incoming player will get a speed cut of 3*degree in his/her first attack.
+
+
+
+
+
+
+
+
+
+
+
+
+
