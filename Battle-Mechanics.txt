@@ -1,59 +1,65 @@
 Wrestling RPG
 =============
 
-Stats: (Dice Pool System)
+Stats:
 ------
-Toughness - Defense Power (Soak)
-Stamina - Recovery Power (Move up on status ladder)
-Strength - Attack Damage (How much damage the moves make)
-Counter - Will the move hit? (Parry)
+Toughness - Health
+Stamina - Recovery Power
+Strength - Attack Potential
+Counter - Defense Potential
 
 Starting:
 You have 10d6 to distribute (splitting of die is allowed - equal to 3.5 pips)
 No stat can go above 4d6. No stat can be less than 0.5 pips
 
-Your Toughness = #die * 6
+Your Toughness = #(toughness dice) * 6
 
 Moveset:
 --------
-Moves fall in 4 categories (overlap of at most 2 categories): Punch, Kick, Leap, Grapple
+Moves fall in 4 categories: Punch, Kick, Leap, Grapple
 Each move has 3 stats: Speed, Damage, Degree
+(Speed and Damage are decided by you, while Degree is not)
 
-For each move, Speed + Damage should be equal to 5 + 10 * Degree
+Constraints:
+* For each move, Speed + Damage should be equal to 5 + 10 * Degree
+* Degree starts at 1, and may change during the battle.
 
 HP and Status changes:
 ----------------------
 Statuses: Fresh, Tired, Exhausted, Zombie
+
 Initial HP = 4 * Toughness
+
 If current HP > 3 * Toughness, Fresh
 If current HP > 2 * Toughness, Tired
 If current HP > 1 * Toughness, Exhausted
 If current HP > 0, Zombie
+If current HP = 0, You Lose!
 
 Audience:
 ---------
-The charisma die (1d6) will roll at the end of every combat turn for each player. On a roll = 5-6, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
+The charisma die (1d6 + momentum?) will roll at the end of every combat turn for each player. On a roll = 5-6, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
 
 If Fresh,       1d6 > 0 (always)
 If Tired,       1d6 > 2 (3,4,5,6)
 If Exhausted,   1d6 > 4 (5,6)
 If Zombie,      1d6 > 6 (never)
 
-On a roll = 1, the audience gets bored, and wants to see more drama. The degree of both players reduces by 1 or 2 (by die roll).
+On a roll = 1, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 or 2 (by die roll).
 
-If the HP difference between players is greater than 3*(#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. His degree increases to MAX.
+If the HP difference between players is greater than 6 * (#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. His degree increases to MAX.
 
 Battle:
 -------
 
-Players choose their moves. Inform GM without showing the other player(s). GM releases move order:
+0) Players choose their moves. Inform GM without showing the other player(s). Players tell GM by providing the move type, move speed, and move damage. GM releases move order.
 
 1) Move with higher Speed goes first
 
 2) Move has (Strength + Speed + Matching) power. If this power > (Counter + Enemy's Speed), the move hits, else the move fails. (If equal, higher speed wins)
 
 3) Matching is based on category of moves:
-Leap > Punch > Kick > Grapple > Leap > Punch > ...
+... > Leap > Punch > Kick > Grapple > Leap > Punch > ...
 +3 if Punch vs. Kick
 +3 if Kick vs. Grapple
 +3 if Grapple vs. Leap
@@ -64,11 +70,11 @@ Leap > Punch > Kick > Grapple > Leap > Punch > ...
 -3 if Grapple vs. Kick
 0 otherwise
 
-4) If the move hits, it does Damage damage, and HP of the opponent reduces.
+4) If the move hits, it does (Damage + Strength) damage, and HP of the opponent reduces.
 
 5) Each player rolls the stamina dice and adds the total to their HP.
 
-6) The Audience makes a decision
+6) The Audience makes a decision (i.e. the charisma die rolls, and the degrees of the players may change)
 
 Tag Team Matches:
 ----------------
