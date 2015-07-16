@@ -14,11 +14,23 @@ No stat can go above 4d6. No stat can be less than 0.5 pips
 
 Your Toughness = #(toughness dice) * 6
 
+Game Stats:
+-----------
+
+Each player also has 2 statistics not in their hands.
+
+Degree = 1 initially
+Momentum = 0 initially
+
+Degree increases and decreases based on the Charisma die.
+Momentum is TBD
+
 Moveset:
 --------
 Moves fall in 4 categories: Punch, Kick, Leap, Grapple
-Each move has 3 stats: Speed, Damage, Degree
-(Speed and Damage are decided by you, while Degree is not)
+Each move has 2 stats: Speed, Damage
+
+You can choose the speed and damage of a move you make at the start of each battle move.
 
 Constraints:
 * For each move, Speed + Damage should be equal to 5 + 10 * Degree
@@ -47,14 +59,14 @@ If Zombie,      1d6 > 6 (never)
 
 On a roll = 1, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 or 2 (by die roll).
 
-If the HP difference between players is greater than 6 * (#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. His degree increases to MAX.
+If the HP difference between players is greater than 6 * (#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. His degree increases to 4.
 
 Battle:
 -------
 
 0) Players choose their moves. Inform GM without showing the other player(s). Players tell GM by providing the move type, move speed, and move damage. GM releases move order.
 
-1) Move with higher Speed goes first
+1) Move with higher Speed goes first (a higher value on a 1d6 die is used to break ties).
 
 2) Move has (Strength + Speed + Matching) power. If this power > (Counter + Enemy's Speed), the move hits, else the move fails. (If equal, higher speed wins)
 
