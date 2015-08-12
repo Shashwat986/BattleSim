@@ -81,9 +81,10 @@ Attack moves fall in 4 categories:
 
 (check out the _Battle_ section to see how attack moves modify damage dealt)
 
-Speed and Damage are restricted by the following constraint:
+Speed and Damage are restricted by the following constraints:
 
 * For each move, `Speed + Damage = 5 + 10 * Degree`
+* Speed and Damage, both, have to be Natural Numbers (1, 2, 3, ...)
 
 ####Performing an Action:
 
