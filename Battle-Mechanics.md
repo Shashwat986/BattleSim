@@ -17,7 +17,7 @@ In fact, if the players using WrestleVania only want to fight, there is no real 
 Dice Basics:
 ------------
 
-This game uses regular six-sided dice. One d6 die is controlled by the GM (or the other players). This die represents the charisma effect of the players on the audience.
+This game uses regular six-sided dice. One d6 die is controlled by the GM (or the other players). This die represents the charisma effect of the players on the audience. Another d6 die is specifically designated the WhatNext die, and is rolled by each player when required.
 
 Character Creation:
 -------------------
@@ -49,10 +49,10 @@ Your Toughness = 6 * (the number of dice allocated to toughness)
 Each player also has 2 attributes not under their control:
 
 * Degree (initially equal to 1. Degree cannot drop below 0)
-* Momentum (initially equal to 0)
+* Momentum (initially equal to 0. Momentum cannot drop below 0, and cannot exceed 3)
 
 Degree increases and decreases based on the Charisma die.
-Momentum increases and decreases based on the fight.
+Momentum increases and decreases based on the progression of the fight.
 
 
 The Game Mechanics:
@@ -62,6 +62,12 @@ The Game Mechanics:
 For non-combat challenges, {{SOMETHING HAPPENS}}.
 
 ###Combat:
+
+There are certain options available to a player in every round of combat:
+
+* Making an Attack
+* Performing an Action
+* Full-Dodging
 
 ####Making an attack:
 
@@ -102,22 +108,24 @@ Based on the current HP of the fighter, he/she may have one of the following con
 
 ###Audience, Charisma, and Momentum:
 
-The charisma die (1d6 + momentum) will roll at the end of every combat turn for each player. On a value >= 5, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
+The charisma roll (1d6 + momentum) will be made at the end of every combat turn for all active players. On a value >= 5, the audience gets pumped, and wants to see more action from that player. That player then rolls his/her WhatNext die. The degree of the player increases as per the following chart:
 
-| Status       | Die Roll Effect   |
-|--------------|-------------------|
-| If Fresh     | 1d6 > 0 (always)  |
-| If Tired     | 1d6 > 2 (3,4,5,6) |
-| If Exhausted | 1d6 > 4 (5,6)     |
-| If Zombie    | 1d6 > 6 (never)   |
+| Status       | Success if             |
+|--------------|------------------------|
+| If Fresh     | WhatNext > 0 (always)  |
+| If Tired     | WhatNext > 2 (3,4,5,6) |
+| If Exhausted | WhatNext > 4 (5,6)     |
+| If Zombie    | WhatNext > 6 (never)   |
 
-On a value <= 2, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 (irrespective of the status).
+On a value <= 2 on the charisma roll, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 (irrespective of the status).
 
 If the HP difference between any two players is greater than 6 * (#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. If the player's degree is less than 4, his/her degree increases to 4.
 
 ###Battle:
 
-0. Players choose their moves. Inform GM without showing the other player(s). Players tell GM by providing the move type, move speed, and move damage. GM releases move order.
+0. Players choose their moves. Inform GM without showing the other player(s). Players tell GM by providing the move-type, move speed, and move damage. Players may also inform the GM that they will be performing an action. On the basis of both players' information, the GM releases the move order.
+
+   One easy way of showing the moves to the GM is by using tokens to represent Speed (since Degree is known, and the GM can calculate the Damage given the Speed), and a 6d die to represent actions/move-type (1 = Punch, 2 = Kick, 3 = Grapple, 4 = Leap, 5 = Action, 6 = Full-Dodge).
 
 1. Move with higher Speed goes first (a higher value on a 1d6 die is used to break ties).
 
@@ -159,24 +167,31 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
 
 6. The Audience makes a decision (i.e. the charisma die rolls, and the degrees of the players may change)
 
-####Tag Team Matches:
+####Combat Actions:
 
-If you wish to tag your teammate in, you roll a die:
+If a user wishes to perform any action, he/she make the following check by rolling the WhatNext die:
 
-| Status       | Die Roll Effect   |
-|--------------|-------------------|
-| If Fresh     | 1d6 > 0 (always)  |
-| If Tired     | 1d6 > 2 (3,4,5,6) |
-| If Exhausted | 1d6 > 4 (5,6)     |
-| If Zombie    | 1d6 > 6 (never)   |
+| Status       | Success if               |
+|--------------|--------------------------|
+| If Fresh     | WhatNext > 1 (2,3,4,5,6) |
+| If Tired     | WhatNext > 2 (3,4,5,6)   |
+| If Exhausted | WhatNext > 3 (4,5,6)     |
+| If Zombie    | WhatNext > 4 (5,6)       |
 
-The new incoming player will get a speed cut of 3*degree in his/her first attack.
+Note that the GM may modify the success values in this table based on the difficulty of the action. In addition, each action may be broken into a certain number of stages, which have to be completed before the action is over. There may also be some events associated with success/failure/attempt at clearing a stage/action.
 
+#####Examples of Combat Actions:
 
+#####Tag Team Matches:
 
+In a tag-team match, tagging-in the active fighter's team-mate can be considered a one-stage action. If the GM wishes to implement Hot-Tags, the event on-success can be: the incoming player gets a speed-boost of 3 * degree on his/her first attack.
 
+#####Ladder Matches:
 
+In a ladder match, climbing up the ladder to get the title-belt can be considered a 5-stage action. Every time a player attempts to clear a stage in this action, and is attacked, he/she fails (on-attempt event)
 
+| Hello World |
+|-------------|
 
 
 
