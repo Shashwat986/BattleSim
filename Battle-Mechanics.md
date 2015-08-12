@@ -3,7 +3,7 @@ WrestleVania - A wrestling RPG
 
 WrestleVania is a new wrestling RPG created by /u/shashwat986 and /u/rick2047. It is (very) loosely based on the Mini Six system by Anti-Paladin games.
 
-This game mechanic can be used in various settings, with minor modifications (mentioned in boxes along this document), however it has been made with wrestling in mind. The mechanic can, broadly, be used to have all kinds of fights:
+This game mechanic can be used in various settings, with minor modifications, however it has been made with wrestling in mind. The mechanic can, broadly, be used to have all kinds of fights:
 
 * Regular wrestling matches
 * Tag-team matches
@@ -24,7 +24,7 @@ Character Creation:
 
 Each character is expected to be a wrestler in the organization(s) of their/the GM's choice. The characters may be loosely put into two categories: Face and Heel (although this is entirely dependent on the way the story is being created). In general, you can consider Face/Heel to be equivalent to Good/Evil alignments in D&D and the like. Similarly, characters can have Chaotic/Neutral/Lawful alignments too.
 
-###Controllable Attributes:
+###Nurtured Attributes:
 
 Each character has four attributes, which can be loosely translated to the following:
 
@@ -44,9 +44,9 @@ A character's toughness is not related to die-rolls, but depends on the number o
 
 Your Toughness = 6 * (the number of dice allocated to toughness)
 
-###Uncontrollable Attributes:
+###Natura Attributes:
 
-Each player also has 2 attributes not under their control:
+Each player also has 2 attributes not directly under their control:
 
 * Degree (initially equal to 1. Degree cannot drop below 0)
 * Momentum (initially equal to 0. Momentum cannot drop below 0, and cannot exceed 3)
@@ -106,16 +106,20 @@ Based on the current HP of the fighter, he/she may have one of the following con
 | If current HP > 0              | Zombie                     |
 | If current HP = 0              | The player is Knocked Out! |
 
+###Full-Dodging
+
+If a player chooses, he/she may make a full-dodge on one turn. If he/she is attacked by the opponent on that turn, the opponent's damage on the player is doubled. In return, at the end of the combat round, the player's momentum increases by 1.
+
 ###Audience, Charisma, and Momentum:
 
-The charisma roll (1d6 + momentum) will be made at the end of every combat turn for all active players. On a value >= 5, the audience gets pumped, and wants to see more action from that player. That player then rolls his/her WhatNext die. The degree of the player increases as per the following chart:
+The charisma roll (1d6 + momentum) will be made at the end of every combat round for all active players. On a value >= 5, the audience gets pumped, and wants to see more action from that player. That player then rolls his/her WhatNext die. The degree of the player increases as per the following chart:
 
-| Status       | Success if             |
-|--------------|------------------------|
-| If Fresh     | WhatNext > 0 (always)  |
-| If Tired     | WhatNext > 2 (3,4,5,6) |
-| If Exhausted | WhatNext > 4 (5,6)     |
-| If Zombie    | WhatNext > 6 (never)   |
+| Status       | Success if               |
+|--------------|--------------------------|
+| If Fresh     | WhatNext > 1 (2,3,4,5,6) |
+| If Tired     | WhatNext > 2 (3,4,5,6)   |
+| If Exhausted | WhatNext > 3 (4,5,6)     |
+| If Zombie    | WhatNext > 4 (5,6)       |
 
 On a value <= 2 on the charisma roll, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 (irrespective of the status).
 
@@ -136,19 +140,19 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
    ... > Leap > Punch > Kick > Grapple > Leap > Punch > ...
 
    ```
-   +----------------------------------------------------------+
-   |                          |        Defending Move         |
-   |                          |-------------------------------|
-   |                          | Punch | Kick | Grapple | Leap |
-   |--------------------------|-------+------+---------+------|
-   |                | Punch   |   0   |  +3  |   0     |  -3  |
-   |                |---------|-------+------+---------+------|
-   | Attacking Move | Kick    |   -3  |  0   |    +3   |   0  |
-   |                |---------|-------+------+---------+------|
-   |                | Grapple |   0   |  -3  |    0    |  +3  |
-   |                |---------|-------+------+---------+------|
-   |                | Leap    |   +3  |   0  |   -3    |   0  |
-   +----------------------------------------------------------+
+   +------------------------------------------------------------------+
+   |                          |            Defending Move             |
+   |                          |---------------------------------------|
+   |                          |  Punch  |  Kick   | Grapple |  Leap   |
+   |--------------------------|---------+---------+---------+---------|
+   |                | Punch   |     0   |   +3    |    0    |    -3   |
+   |                |---------|---------+---------+---------+---------|
+   |                | Kick    |    -3   |    0    |   +3    |     0   |
+   | Attacking Move |---------|---------+---------+---------+---------|
+   |                | Grapple |     0   |   -3    |    0    |    +3   |
+   |                |---------|---------+---------+---------+---------|
+   |                | Leap    |    +3   |    0    |   -3    |     0   |
+   +------------------------------------------------------------------+
    ```
 
    * +3 if Punch vs. Kick
@@ -188,10 +192,12 @@ In a tag-team match, tagging-in the active fighter's team-mate can be considered
 
 #####Ladder Matches:
 
-In a ladder match, climbing up the ladder to get the title-belt can be considered a 5-stage action. Every time a player attempts to clear a stage in this action, and is attacked, he/she fails (on-attempt event)
+In a ladder match, climbing up the ladder to get the title-belt can be considered a 5-stage action. Every time a player attempts to clear a stage in this action, and is attacked, he/she fails (on-attempt event).
 
-| Hello World |
-|-------------|
+#####Fight on a Tight-Rope:
+
+Every combat move has to be preceded by a one-stage action testing balance on the tight-rope. If a player fails, he/she loses 10 Hit-Points. If the player succeeds, he/she is allowed to make a combat move.
+
 
 
 
