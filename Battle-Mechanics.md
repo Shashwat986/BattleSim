@@ -120,7 +120,7 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
 3. Matching is based on category of moves:
    ... > Leap > Punch > Kick > Grapple > Leap > Punch > ...
 
-```
+   ```
    +----------------------------------------------------------+
    |                          |        Defending Move         |
    |                          |-------------------------------|
@@ -134,7 +134,7 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
    |                |---------|-------+------+---------+------|
    |                | Leap    |   +3  |   0  |   -3    |   0  |
    +----------------------------------------------------------+
-```
+   ```
 
    +3 if Punch vs. Kick
    +3 if Kick vs. Grapple
