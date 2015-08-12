@@ -86,7 +86,6 @@ Based on the current HP of the fighter, he/she may have one of the following con
 * Exhausted
 * Zombie
 
-|--------------------------------|----------------------------|
 | Condition                      | Status                     |
 |--------------------------------|----------------------------|
 | If current HP > 3 * Toughness  | Fresh                      |
@@ -94,18 +93,17 @@ Based on the current HP of the fighter, he/she may have one of the following con
 | If current HP > 1 * Toughness  | Exhausted                  |
 | If current HP > 0              | Zombie                     |
 | If current HP = 0              | The player is Knocked Out! |
-|--------------------------------|----------------------------|
 
 ###Audience, Charisma, and Momentum:
 
 The charisma die (1d6 + momentum) will roll at the end of every combat turn for each player. On a roll = 5-6, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
 
-|----------------------------------|
+| Status       | Die Roll Effect   |
+|--------------|-------------------|
 | If Fresh     | 1d6 > 0 (always)  |
 | If Tired     | 1d6 > 2 (3,4,5,6) |
 | If Exhausted | 1d6 > 4 (5,6)     |
 | If Zombie    | 1d6 > 6 (never)   |
-|----------------------------------|
 
 On a roll = 1, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 or 2 (by die roll).
 
@@ -122,6 +120,7 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
 3. Matching is based on category of moves:
    ... > Leap > Punch > Kick > Grapple > Leap > Punch > ...
 
+```
    ------------------------------------------------------------
    |                          |        Defending Move         |
    |                          |-------------------------------|
@@ -135,7 +134,7 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
    |                |---------|-------|------|---------|------+
    |                | Leap    |   +3  |   0  |   -3    |   0  |
    |----------------|---------|-------|------|---------|------+
-
+```
 
    +3 if Punch vs. Kick
    +3 if Kick vs. Grapple
