@@ -37,16 +37,18 @@ Each player is given 10d6 to distribute among the attributes.
 No attribute can go above 4d6. No stat can be less than 0.5 pips.
 
 Users can also choose to "Split the Dice". Each die is equal to 3.5 pips, which carry a constant bonus.
+
 Example progression: 1d6, 1d6 + 0.5, 1d6 + 1, ..., 1d6 + 3, 1d6 + 3.5, 2d6
 
 A character's toughness is not related to die-rolls, but depends on the number of dice you allocate to it.
+
 Your Toughness = 6 * (the number of dice allocated to toughness)
 
 ###Uncontrollable Attributes:
 
 Each player also has 2 attributes not under their control:
 
-* Degree (initially equal to 1)
+* Degree (initially equal to 1. Degree cannot drop below 0)
 * Momentum (initially equal to 0)
 
 Degree increases and decreases based on the Charisma die.
@@ -56,6 +58,7 @@ Momentum increases and decreases based on the fight.
 The Game Mechanics:
 -------------------
 
+###Non-Combat Interactions:
 For non-combat challenges, {{SOMETHING HAPPENS}}.
 
 ###Combat:
@@ -71,13 +74,16 @@ Moves fall in 4 categories:
 * Grapple
 
 Speed and Damage are restricted by the following constraint:
-* For each move, Speed + Damage should be equal to 5 + 10 * Player Degree
+
+* For each move, `Speed + Damage = 5 + 10 * Degree`
 
 ####HP and Status changes:
 
 This system uses an HP (Hit-Points) mechanic. The initial hitpoints are calculated as follows:
 
+```
 Initial HP = 4 * Toughness
+```
 
 Based on the current HP of the fighter, he/she may have one of the following condition statuses.
 
@@ -96,7 +102,7 @@ Based on the current HP of the fighter, he/she may have one of the following con
 
 ###Audience, Charisma, and Momentum:
 
-The charisma die (1d6 + momentum) will roll at the end of every combat turn for each player. On a roll = 5-6, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
+The charisma die (1d6 + momentum) will roll at the end of every combat turn for each player. On a value >= 5, the audience gets pumped, and wants to see more action from that player. The degree of the player increases as per the following chart:
 
 | Status       | Die Roll Effect   |
 |--------------|-------------------|
@@ -105,9 +111,9 @@ The charisma die (1d6 + momentum) will roll at the end of every combat turn for 
 | If Exhausted | 1d6 > 4 (5,6)     |
 | If Zombie    | 1d6 > 6 (never)   |
 
-On a roll = 1, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 or 2 (by die roll).
+On a value <= 2, the audience gets bored, and wants to see more drama from that player. The degree of the player reduces by 1 (irrespective of the status).
 
-If the HP difference between any two players is greater than 6 * (#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. His/her degree increases to 4.
+If the HP difference between any two players is greater than 6 * (#toughness dice + #stamina dice), the weaker player becomes the 'underdog'. If the player's degree is less than 4, his/her degree increases to 4.
 
 ###Battle:
 
@@ -118,6 +124,7 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
 2. Move has (Strength + Speed + Matching) power. If this power > (Counter + Enemy's Speed), the move hits, else the move fails. (If equal, higher speed wins)
 
 3. Matching is based on category of moves:
+
    ... > Leap > Punch > Kick > Grapple > Leap > Punch > ...
 
    ```
@@ -136,15 +143,15 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
    +----------------------------------------------------------+
    ```
 
-   +3 if Punch vs. Kick
-   +3 if Kick vs. Grapple
-   +3 if Grapple vs. Leap
-   +3 if Leap vs. Punch
-   -3 if Kick vs. Punch
-   -3 if Punch vs. Leap
-   -3 if Leap vs. Grapple
-   -3 if Grapple vs. Kick
-   0 otherwise
+   * +3 if Punch vs. Kick
+   * +3 if Kick vs. Grapple
+   * +3 if Grapple vs. Leap
+   * +3 if Leap vs. Punch
+   * -3 if Kick vs. Punch
+   * -3 if Punch vs. Leap
+   * -3 if Leap vs. Grapple
+   * -3 if Grapple vs. Kick
+   * 0 otherwise
 
 4. If the move hits, it does (Damage + Strength) damage, and HP of the opponent reduces.
 
