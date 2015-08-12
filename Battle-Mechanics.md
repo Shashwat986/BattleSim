@@ -163,10 +163,12 @@ If the HP difference between any two players is greater than 6 * (#toughness dic
 
 If you wish to tag your teammate in, you roll a die:
 
-If Fresh,       1d6 > 0 (always)
-If Tired,       1d6 > 2 (3,4,5,6)
-If Exhausted,   1d6 > 4 (5,6)
-If Zombie,      1d6 > 6 (never)
+| Status       | Die Roll Effect   |
+|--------------|-------------------|
+| If Fresh     | 1d6 > 0 (always)  |
+| If Tired     | 1d6 > 2 (3,4,5,6) |
+| If Exhausted | 1d6 > 4 (5,6)     |
+| If Zombie    | 1d6 > 6 (never)   |
 
 The new incoming player will get a speed cut of 3*degree in his/her first attack.
 
