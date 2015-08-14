@@ -51,11 +51,6 @@ Each player also has 2 attributes not directly under their control:
 * Degree (initially equal to 1. Degree cannot drop below 0)
 * Momentum (initially equal to 0. Momentum cannot drop below 0, and cannot exceed 3)
 
-Degree is initially set to 1. It increases and decreases based on the Charisma die. It cannot drop below 0.
-
-Momentum is initially set to 0. It increases and decreases based on the progression of the fight. It cannot go above 3, and cannot drop below 0.
-
-
 The Game Mechanics:
 -------------------
 
