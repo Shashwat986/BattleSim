@@ -36,9 +36,9 @@ Each character has four attributes, which can be loosely translated to the follo
 Each player is given 10d6 to distribute among the attributes.
 No attribute can go above 4d6. No stat can be less than 0.5 pips.
 
-Users can also choose to "Split the Dice". Each die is equal to 3.5 pips, which carry a constant bonus.
+Users can also choose to "Split the Dice". Each die is equal to 3 pips, which carry a constant bonus.
 
-Example progression: 1d6, 1d6 + 0.5, 1d6 + 1, ..., 1d6 + 2.5, 1d6 + 3, 2d6
+Example progression: 1d6, 1d6 + 1, 1d6 + 2, 2d6
 
 A character's toughness is not related to die-rolls, but depends on the number of dice you allocate to it.
 
@@ -52,6 +52,7 @@ Each player also has 2 attributes not directly under their control:
 * Momentum (initially equal to 0. Momentum cannot drop below 0, and cannot exceed 3)
 
 Degree is initially set to 1. It increases and decreases based on the Charisma die. It cannot drop below 0.
+
 Momentum is initially set to 0. It increases and decreases based on the progression of the fight. It cannot go above 3, and cannot drop below 0.
 
 
