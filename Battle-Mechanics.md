@@ -54,10 +54,10 @@ Each player also has 2 attributes not directly under their control:
 The Game Mechanics:
 -------------------
 
-###Non-Combat Interactions:
+### Non-Combat Interactions:
 For non-combat challenges, {{SOMETHING HAPPENS}}.
 
-###Combat:
+### Combat:
 
 There are certain options available to a player in every round of combat:
 
@@ -65,7 +65,7 @@ There are certain options available to a player in every round of combat:
 * Performing an Action
 * Full-Dodging
 
-####Making an attack:
+#### Making an attack:
 
 Each time a player wants to make an attack, he/she needs to provide the following values: Attack Category, Move Speed, and Move Damage.
 
@@ -82,7 +82,7 @@ Speed and Damage are restricted by the following constraints:
 * For each move, `Speed + Damage = 5 + 10 * Degree`
 * Speed and Damage, both, have to be whole numbers (0, 1, 2, 3, ...)
 
-####Performing an Action:
+#### Performing an Action:
 
 If a user wishes to perform any action, he/she make the following check by rolling the WhatNext die:
 
@@ -93,27 +93,32 @@ If a user wishes to perform any action, he/she make the following check by rolli
 | If Exhausted | WhatNext > 3 (4,5,6)     |
 | If Zombie    | WhatNext > 4 (5,6)       |
 
-Note that the GM may modify the success values in this table based on the difficulty of the action. In addition, each action may be broken into a certain number of stages, which have to be completed before the action is over. There may also be some events associated with success/failure/attempt at clearing a stage/action.
+Note that the GM may modify the success values in this table based on the diffic
 
-#####<u>Examples of Actions:</u>
 
-#####Tag Team Matches:
+
+
+xfty of the action. In addition, each action may be broken into a certain number of stages, which have to be completed before the action is over. There may also be some events associated with success/failure/attempt at clearing a stage/action.
+
+#### Examples of Actions:
+
+##### Tag Team Matches:
 
 In a tag-team match, tagging-in the active fighter's team-mate can be considered a one-stage action. If the GM wishes to implement Hot-Tags, the event on-success can be: the incoming player gets a speed-boost of 3 * degree on his/her first attack.
 
-#####Ladder Matches:
+##### Ladder Matches:
 
 In a ladder match, climbing up the ladder to get the title-belt can be considered a 5-stage action. Every time a player attempts to clear a stage in this action, and is attacked, he/she fails (on-attempt event).
 
-#####Fight on a Tight-Rope:
+##### Fight on a Tight-Rope:
 
 Every combat move has to be preceded by a one-stage action testing balance on the tight-rope. If a player fails, he/she loses 10 Hit-Points. If the player succeeds, he/she is allowed to make a combat move.
 
-####Full-Dodging
+#### Full-Dodging
 
 If a player chooses, he/she may make a full-dodge on one turn. If he/she is attacked by the opponent on that turn, the opponent's damage on the player is doubled. In return, at the end of the combat round, the player's momentum increases by 1.
 
-###HP and Status changes:
+### HP and Status changes:
 
 This system uses an HP (Hit-Points) mechanic. The initial hitpoints are calculated as follows:
 
@@ -136,7 +141,7 @@ Based on the current HP of the fighter, he/she may have one of the following con
 | If current HP > 0              | Zombie                     |
 | If current HP = 0              | The player is Knocked Out! |
 
-###Audience, Charisma, and Momentum:
+### Audience, Charisma, and Momentum:
 
 The charisma roll `(1d6 + the player's momentum)` will be made at the end of every combat round for all active players. On a value `>= 5`, the audience gets pumped, and wants to see more action from that player. That player then rolls his/her WhatNext die. The degree of the player increases as per the following chart:
 
@@ -153,7 +158,7 @@ On a value `<= 2` on the charisma roll, the audience gets bored, and wants to se
 
 If the HP difference between any two players is greater than `6 * (#toughness dice + #stamina dice)`, the weaker player becomes the "underdog". If the player's degree is less than 4, his/her degree increases to 4.
 
-###Battle - Sequence of Moves:
+### Battle - Sequence of Moves:
 
 0. Players choose their moves. Inform GM without showing the other player(s). Players tell GM by providing the move-type, move speed, and move damage. Players may also inform the GM that they will be performing an action. On the basis of both players' information, the GM releases the move order.
 
